@@ -16,6 +16,6 @@ Aspect implementation [Link](SpringAOPSample/src/main/java/com/example/aop/aspec
 How to define pointCut for all methods in given class [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/ServiceAspect.java#L18)
 
 ## Handling Events for logging Aspect
-Event Defination [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEvent.java) <br>
-Event Listener [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEventListener.java) <br>
-Event Fire [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/LoggingAspect.java#L48)
+Event Defination for LoggingEvent [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEvent.java) <br>
+Event Listener for LoggingEvent [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEventListener.java) <br>
+Firing LoggingEvent from Aspect [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/LoggingAspect.java#L48)
