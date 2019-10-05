@@ -10,13 +10,20 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
+
+import com.example.aop.events.LoggingEvent;
 
 @Component
 @Aspect
 public class LoggingAspect {
 
 	private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
+
+	@Autowired
+	private ApplicationEventPublisher applicationEventPublisher;
 
 	/*
 	 * Aspects should be called for all methods annotated with @Loggable annotation
@@ -32,6 +39,13 @@ public class LoggingAspect {
 
 		logger.info("Before Aspect called for method: " + methodName);
 		logger.info("Before Aspect argument value is: " + arguments[0].toString());
+
+		/*
+		 * Additionally publish event also that Before is called for Loggable resource
+		 */
+		String message = "method " + methodName + " is called with argument value" + arguments[0].toString();
+		LoggingEvent loggingEvent = new LoggingEvent(this, message);
+		applicationEventPublisher.publishEvent(loggingEvent);
 	}
 
 	@AfterReturning(value = "loggableMethods()", returning = "result")
