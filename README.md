@@ -14,3 +14,8 @@ How to define pointCut for custom annotation [Link](SpringAOPSample/src/main/jav
 Aspect implementation [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/ServiceAspect.java)
 
 How to define pointCut for all methods in given class [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/ServiceAspect.java#L18)
+
+## Handling Events for logging Aspect
+Event Defination [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEvent.java) <br>
+Event Listener [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEventListener.java) <br>
+Event Fire [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/LoggingAspect.java#L48)
