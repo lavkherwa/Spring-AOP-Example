@@ -44,7 +44,8 @@ public class LoggingAspect {
 		 * Additionally publish event also that Before is called for Loggable resource
 		 */
 		String message = "method " + methodName + " is called with first argument value " + arguments[0].toString();
-		LoggingEvent loggingEvent = new LoggingEvent(this, message);
+		boolean success = "success".equals(arguments[0].toString());
+		LoggingEvent loggingEvent = new LoggingEvent(this, message, success);
 		applicationEventPublisher.publishEvent(loggingEvent);
 	}
 
