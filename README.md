@@ -1,6 +1,6 @@
 # Spring-AOP
 
-Sample application for spring AOP driven with custom annotations
+Sample application for spring AOP driven with custom annotations, events and specified class methods
 
 Any method annotated with the provided annotation will be considered for pointCut ;)
 
