@@ -19,3 +19,6 @@ How to define pointCut for all methods in given class [Link](SpringAOPSample/src
 Event Defination for LoggingEvent [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEvent.java) <br>
 Event Listener for LoggingEvent [Link](SpringAOPSample/src/main/java/com/example/aop/events/LoggingEventListener.java) <br>
 Firing LoggingEvent from Aspect [Link](SpringAOPSample/src/main/java/com/example/aop/aspects/LoggingAspect.java#L48)
+
+By default spring events are synchronous, to make them run asynchronously I have added below configuration <br>
+[configuration](SpringAOPSample/src/main/java/com/example/aop/config/AsynchronousEventsConfig.java)
