@@ -18,6 +18,9 @@ public class LoggingAspect {
 
 	private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
+	/*
+	 * Aspects should be called for all methods annotated with @Loggable annotation
+	 */
 	@Pointcut("within(com.example..*) && @annotation(com.example.aop.annotations.Loggable)")
 	public void loggableMethods() {
 	}
